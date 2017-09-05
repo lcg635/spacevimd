@@ -2,6 +2,7 @@ let mapleader = ","
 let g:spacevim_enable_debug = 0
 let g:spacevim_realtime_leader_guide = 1
 let g:spacevim_automatic_update = 1
+let g:spacevim_enable_powerline_fonts = 1
 
 call SpaceVim#layers#load('incsearch')
 call SpaceVim#layers#load('autocomplete')
@@ -72,3 +73,4 @@ let g:go_updatetime = 200
 let g:go_fmt_command = "goimports"
 let g:go_autodetect_gopath = 1
 
+au FileType go let $GOPATH=go#path#Detect()
