@@ -46,7 +46,7 @@ let g:spacevim_custom_plugins= [
       \ ['saihoooooooo/vim-textobj-space'],
       \ ['zhujinxuan/snippets-tex-equations', {'on_ft' : 'tex'}],
       \]
-let g:spacevim_unite_leader = '<F5>'
+let g:spacevim_unite_leader = 'r'
 let g:spacevim_window_leader = '<F7>'
 let g:spacevim_denite_leader = '<F6>'
 let g:spacevim_snippet_engine = 'ultisnips'
