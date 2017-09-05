@@ -38,8 +38,6 @@ if has('python3')
 endif
 
 set tabstop=4
-" set shiftwidth=
-" call dein#check_clean();
 let g:spacevim_custom_plugins= [ 
       \ ['tpope/vim-sensible'],
       \ ['kana/vim-smartword'],
@@ -72,6 +70,5 @@ let g:go_auto_type_info = 1
 let g:go_auto_sameids = 1
 let g:go_updatetime = 200
 let g:go_fmt_command = "goimports"
-
-au FileType go let $GOPATH = go#path#Detect()
+let g:go_autodetect_gopath = 1
 
