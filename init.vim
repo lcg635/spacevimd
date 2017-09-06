@@ -62,7 +62,11 @@ call SpaceVim#custom#SPC('nmap', ['c', 'L'], '<plug>NERDCommenterComment', 'comm
 call SpaceVim#custom#SPC('nmap', ['c', 'p'], 'vip<Plug>NERDCommenterInvert', 'toggle comment paragraphs', 0)
 call SpaceVim#custom#SPC('nmap', ['c', 'P'], 'vip<Plug>NERDCommenterComment', 'comment paragraphs', 0)
 call SpaceVim#custom#SPC('nmap', ['b', '#'], ':b #<CR>', 'Previously active buffer(:b #)', 0)
+call SpaceVim#custom#SPC('nmap', ['m', 'i'], ':GoImplements<CR>', 'go implements', 0)
+call SpaceVim#custom#SPC('nmap', ['m', 'r'], ':GoReferrers<CR>', 'go referrers', 0)
 call SpaceVim#custom#SPC('nmap', ['q'], ':qa<CR>', 'quit', 0)
+
+nnoremap <silent> <Leader>gl :Gina pull<CR>
 
 let g:spacevim_colorscheme = 'atom'
 
