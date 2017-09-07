@@ -64,7 +64,6 @@ call SpaceVim#custom#SPC('nmap', ['c', 'l'], '<plug>NERDCommenterInvert', 'toggl
 call SpaceVim#custom#SPC('nmap', ['c', 'L'], '<plug>NERDCommenterComment', 'comment lines', 0)
 call SpaceVim#custom#SPC('nmap', ['c', 'p'], 'vip<Plug>NERDCommenterInvert', 'toggle comment paragraphs', 0)
 call SpaceVim#custom#SPC('nmap', ['c', 'P'], 'vip<Plug>NERDCommenterComment', 'comment paragraphs', 0)
-call SpaceVim#custom#SPC('nmap', ['b', 'j'], ':b #<CR>', 'Previously active buffer(:b #)', 0)
 call SpaceVim#custom#SPC('nmap', ['m', 'i'], ':GoImplements<CR>', 'go implements', 0)
 call SpaceVim#custom#SPC('nmap', ['m', 'r'], ':GoReferrers<CR>', 'go referrers', 0)
 call SpaceVim#custom#SPC('nmap', ['q'], ':qa<CR>', 'quit', 0)
