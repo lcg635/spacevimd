@@ -16,10 +16,14 @@ end
 "let g:spacevim_filemanager = 'nerdtree'
 call SpaceVim#layers#load('lang#go')
 " call SpaceVim#layers#load('lang#php')
-call SpaceVim#layers#load('lang#python')
+" call SpaceVim#layers#load('lang#python')
 call SpaceVim#layers#load('shell')   
 call SpaceVim#layers#load('ui')   
 
+
+let g:spacevim_custom_plugins = [
+\    ['rhysd/unite-go-import.vim', {'on_ft': 'go'}],
+\ ]
 
 let g:spacevim_enable_vimfiler_welcome = 1
 let g:deoplete#auto_complete_delay = 150
@@ -34,6 +38,8 @@ if executable('vint')
   call add(g:neomake_vim_enabled_makers, 'vint') 
 endif
 
+let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee\|pkg\|bin\|\.vscode'
+let g:neomake_html_enabled_makers = []
 let g:neomake_tex_enabled_makers = ['chktex']
 
 if has('python3')
@@ -46,13 +52,6 @@ if $TERM_PROGRAM =~ "iTerm"
 endif
 
 set tabstop=4
-let g:spacevim_custom_plugins= [ 
-      \ ['tpope/vim-sensible'],
-      \ ['kana/vim-smartword'],
-      \ ['vim-scripts/argtextobj.vim'],
-      \ ['saihoooooooo/vim-textobj-space'],
-      \ ['zhujinxuan/snippets-tex-equations', {'on_ft' : 'tex'}],
-      \]
 let g:spacevim_unite_leader = 'r'
 let g:spacevim_window_leader = '<F7>'
 let g:spacevim_denite_leader = '<F6>'
@@ -64,8 +63,9 @@ call SpaceVim#custom#SPC('nmap', ['c', 'l'], '<plug>NERDCommenterInvert', 'toggl
 call SpaceVim#custom#SPC('nmap', ['c', 'L'], '<plug>NERDCommenterComment', 'comment lines', 0)
 call SpaceVim#custom#SPC('nmap', ['c', 'p'], 'vip<Plug>NERDCommenterInvert', 'toggle comment paragraphs', 0)
 call SpaceVim#custom#SPC('nmap', ['c', 'P'], 'vip<Plug>NERDCommenterComment', 'comment paragraphs', 0)
-call SpaceVim#custom#SPC('nmap', ['m', 'i'], ':GoImplements<CR>', 'go implements', 0)
+call SpaceVim#custom#SPC('nmap', ['m', 'i'], ':Unite go/import<CR>', 'go import', 0)
 call SpaceVim#custom#SPC('nmap', ['m', 'r'], ':GoReferrers<CR>', 'go referrers', 0)
+call SpaceVim#custom#SPC('nmap', ['m', 'o'], ':GoInfo<CR>', 'go info', 0)
 call SpaceVim#custom#SPC('nmap', ['q'], ':qa<CR>', 'quit', 0)
 
 nnoremap <silent> <Leader>gl :Gina pull<CR>
@@ -78,9 +78,9 @@ let g:spacevim_guifont='DroidSansMonoForPowerline\ Nerd\ Font:h11'
 let g:spacevim_enable_tabline_filetype_icon=0
 let g:spacevim_buffer_index_type = 4
 
-let g:go_auto_type_info = 1
+let g:go_auto_type_info = 0
 let g:go_auto_sameids = 1
-let g:go_updatetime = 200
+let g:go_updatetime = 500
 let g:go_fmt_command = "goimports"
 let g:go_autodetect_gopath = 1
 
