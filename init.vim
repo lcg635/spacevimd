@@ -70,10 +70,10 @@ call SpaceVim#custom#SPC('nmap', ['c', 'P'], 'vip<Plug>NERDCommenterComment', 'c
 call SpaceVim#custom#SPC('nmap', ['m', 'i'], ':Unite go/import<CR>', 'go import', 0)
 call SpaceVim#custom#SPC('nmap', ['m', 'r'], ':GoReferrers<CR>', 'go referrers', 0)
 call SpaceVim#custom#SPC('nmap', ['m', 'o'], ':GoInfo<CR>', 'go info', 0)
+call SpaceVim#custom#SPC('nmap', ['m', 'q'], ':qa<CR>', 'quite', 0)
 
 nnoremap <silent> <Leader>gl :Gina pull<CR>
 nnoremap <silent> <Leader>gB :Gina branch<CR>
-nnoremap <silent> <Leader>q :qa<CR>
 vnoremap <silent> <C-c> "+y
 
 let g:spacevim_colorscheme = 'atom'
