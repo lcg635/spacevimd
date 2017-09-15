@@ -36,6 +36,8 @@ endif
 
 let g:tagbar_width=60
 let g:tagbar_autofocus=1
+let g:tagbar_sort=0
+
 let g:neomake_html_enabled_makers = []
 let g:ctrlp_custom_ignore = {
   \ 'dir': 'node_modules\|.DS_Store\|.git\|.vscode\|bin\|pkg'
