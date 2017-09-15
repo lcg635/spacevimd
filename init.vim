@@ -34,6 +34,8 @@ if executable('vint')
   call add(g:neomake_vim_enabled_makers, 'vint')
 endif
 
+let g:tagbar_width=60
+let g:tagbar_autofocus=1
 let g:neomake_html_enabled_makers = []
 let g:ctrlp_custom_ignore = {
   \ 'dir': 'node_modules\|.DS_Store\|.git\|.vscode\|bin\|pkg'
@@ -73,8 +75,11 @@ call SpaceVim#custom#SPC('nmap', ['m', 'o'], ':GoInfo<CR>', 'go info', 0)
 call SpaceVim#custom#SPC('nmap', ['q'], ':qa<CR>', 'quite', 0)
 
 nnoremap <silent> <Leader>gl :Gina pull<CR>
-nnoremap <silent> <Leader>gB :Gina branch<CR>
+nnoremap <silent> <Leader>gL :Gina log<CR>
+nnoremap <silent> <F10> :Gina branch<CR>
 vnoremap <silent> <C-c> "+y
+nnoremap <silent> <F5> :e<CR>
+nnoremap <silent> ! :!
 
 let g:spacevim_colorscheme = 'atom'
 
